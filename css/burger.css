@@ -745,6 +745,7 @@ button{
     border-top: 4px solid #FF5E45;
     transition: all .3s;
     position: relative;
+    z-index: 9;
     padding: 10px 10px 80px 10px;
 }
 .register{
@@ -1009,6 +1010,7 @@ button{
     background: #EFE9E7;
     box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
     position: relative;
+    z-index: 9;
 }
 .cart-item .fa-heart{
     position: absolute;
