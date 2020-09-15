@@ -903,7 +903,7 @@ button{
     color: #ffffff;
 }
 
-@media(max-width:415px){
+@media(max-width:767px){
     .sidebar{
         width: 95%;
         margin: 5% 2.5%;
@@ -981,7 +981,7 @@ button{
     border-radius: 50%;
     font-size: 7px; 
 }
-@media(max-width:768px){
+@media(max-width:415px){
     .cart-topmenu{
         flex-wrap: wrap;
     }
