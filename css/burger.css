@@ -54,6 +54,7 @@ button{
     height: auto;
     background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
+    z-index: 99;
 }
 .topbar{
     display: flex;
