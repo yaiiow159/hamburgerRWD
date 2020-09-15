@@ -54,7 +54,6 @@ button{
     height: auto;
     background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
-    /* position: absolute; */
 }
 .topbar{
     display: flex;
@@ -99,7 +98,9 @@ button{
 }
 
 @media(max-width:767px){
-
+    .header{
+        position: fixed;
+    }
     .topmenu{
         flex-direction: column;
         /* 隱藏選單開始 */
