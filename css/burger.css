@@ -981,7 +981,7 @@ button{
     border-radius: 50%;
     font-size: 7px; 
 }
-@media(max-width:415px){
+@media(max-width:768px){
     .cart-topmenu{
         flex-wrap: wrap;
     }
