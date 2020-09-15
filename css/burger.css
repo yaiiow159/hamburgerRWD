@@ -857,8 +857,16 @@ button{
     }
 }
 @media(max-width:375px){
-    .register-aside input{
+     .register .register-aside input{
         max-width: 250px;
+    }
+}
+@media(max-width:320px){
+    .register .register-aside input{
+        max-width: 150px;
+    }
+    .register .register-clause{
+        display: none;
     }
 }
 /* register end */
