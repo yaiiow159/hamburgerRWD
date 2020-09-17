@@ -1,28 +1,32 @@
 @mixin pad {
-    @media (max-width:768px) {
-        @content
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin padPlus {
+    @media (max-width: 1024px) {
+        @content;
     }
 }
 
 @mixin iphone8 {
-    @media (max-width:414px) {
-        @content
+    @media (max-width: 414px) {
+        @content;
     }
 }
 
 @mixin iphoneX {
-    @media (max-width:374px) {
-        @content
+    @media (max-width: 374px) {
+        @content;
     }
 }
 @mixin mobile {
-    @media (max-width:320px) {
-        @content
+    @media (max-width: 320px) {
+        @content;
     }
 }
 @mixin samsung {
-    @media (max-width:412px) {
-        @content
+    @media (max-width: 412px) {
+        @content;
     }
 }
-

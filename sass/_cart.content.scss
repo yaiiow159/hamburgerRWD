@@ -1,123 +1,120 @@
-@import 'mixin';
-@import 'grid';
-@import 'variable';
+@import "mixin";
+@import "grid";
+@import "variable";
 
 //變數
-$bg-color:rgb(239,233,231);
-$fn-color:rgb(61,17,1);
+$bg-color: rgb(239, 233, 231);
+$fn-color: rgb(61, 17, 1);
 
-.content-product{
+.content-product {
     display: flex;
     padding: 40px;
 
-    @include pad(){
+    @include pad() {
         flex-direction: column;
         align-items: center;
         padding: 0;
     }
-
-    
 }
-.sidebar{
+.sidebar {
     margin-right: 5%;
     width: 20%;
-    @include pad(){
+    @include pad() {
         width: 95%;
         margin: 5% 2.5%;
     }
 
-    h3{
+    h3 {
         font-size: 20px;
         margin-bottom: 20px;
-        @include pad(){
+        @include pad() {
             text-align: center;
-
         }
 
-        i{
+        i {
             margin-right: 10px;
         }
     }
 }
 
-.side-list{
-    @include pad(){
+.side-list {
+    @include pad() {
         text-align: center;
     }
-     li{
+    li {
         width: 100%;
         border-bottom: 1px solid $bg-color;
-       a{
-           color: $fn-color;
-           padding: 10px 0;
-           transition: all .3s;
-           text-indent: 5px;
-           &:hover{
-               background-color: $fn-color;
-               color: #fff;
-           }
-       }      
-     } 
+        a {
+            color: $fn-color;
+            padding: 10px 0;
+            transition: all 0.3s;
+            text-indent: 5px;
+            &:hover {
+                background-color: $fn-color;
+                color: #fff;
+            }
+        }
+    }
 }
-.rightbar{
+.rightbar {
     width: 75%;
 }
 
-.cart-topmenu{
+.cart-topmenu {
     display: flex;
-    @include iphone8(){
+    @include iphone8() {
         flex-wrap: wrap;
     }
 }
 
-.search-side{
+.search-side {
     position: relative;
     width: 70%;
-    @include iphone8(){
+    @include iphone8() {
         width: 100%;
         margin-bottom: 4%;
     }
 
-    input{
+    input {
         width: 100%;
         padding: 0 40px 0 0;
         border: 2px solid $fn-color;
     }
-    button{
+    button {
         position: absolute;
         right: 0;
         width: 32px;
         height: 32px;
         border: 2px solid $fn-color;
-        &:hover{
+        &:hover {
             color: #fff;
             background-color: $fn-color;
-            transition: all .3s;
+            transition: all 0.3s;
         }
     }
 }
 
-.shop-count{
+.shop-count {
     display: flex;
     margin-left: 15%;
     width: 20%;
 
-    @include iphone8(){
+    @include iphone8() {
         width: 100%;
         margin-bottom: 4%;
         align-items: center;
         justify-content: center;
     }
 
-    a{
+    a {
         color: $fn-color;
         margin: 0 8px;
-        &:first-child:hover{
+        &:first-child:hover {
             color: #a9583a;
         }
-        &:last-child{
+        &:last-child {
             position: relative;
-            &::before{
+            &::before {
                 content: "";
                 display: block;
                 width: 1px;
@@ -127,49 +124,48 @@ $fn-color:rgb(61,17,1);
                 left: -10px;
                 background: $fn-color;
             }
-            span{
+            span {
                 position: absolute;
                 width: 16px;
                 top: -6px;
                 right: -9px;
-                background: #FF5E45;
+                background: #ff5e45;
                 text-align: center;
                 color: #ffffff;
-                border: 1px solid #EFE9E7; 
+                border: 1px solid #efe9e7;
                 border-radius: 50%;
-                font-size: 7px; 
+                font-size: 7px;
             }
         }
     }
-
 }
-.cart{
+.cart {
     margin-bottom: -20px;
 }
 
-.cart-list{
+.cart-list {
     display: flex;
     flex-wrap: wrap;
     line-height: 1.5;
 
-    .cart-item{
+    .cart-item {
         text-align: center;
         width: 33.33333%;
         margin: 3% 1.5% 1.5% 0%;
-        background: #EFE9E7;
-        box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+        background: #efe9e7;
+        box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
         position: relative;
         z-index: 9;
-        @include pad(){
+        @include pad() {
             width: 48%;
             margin: 2% 1%;
         }
-        @include iphone8(){
+        @include iphone8() {
             width: 98%;
             margin: 4% 1%;
         }
 
-        &:first-child::before{
+        &:first-child::before {
             content: "";
             display: block;
             width: 110px;
@@ -180,27 +176,27 @@ $fn-color:rgb(61,17,1);
             z-index: 1;
             border-width: 0 24px 24px;
             border-style: solid;
-            border-color: transparent transparent #00CC99;
+            border-color: transparent transparent #00cc99;
         }
 
-        &:hover{
-            transition: all .3s;
-            box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.30);
+        &:hover {
+            transition: all 0.3s;
+            box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.3);
         }
-        img{
+        img {
             height: 120px;
         }
 
-        h3{
+        h3 {
             font-size: 20px;
         }
 
-        h4{
+        h4 {
             font-size: 12px;
             position: relative;
             margin-bottom: 20px;
 
-            &::after{
+            &::after {
                 content: "";
                 width: 45%;
                 height: 1px;
@@ -211,48 +207,48 @@ $fn-color:rgb(61,17,1);
                 right: 27%;
             }
         }
-        button{
+        button {
             text-align: center;
-            border: 2px solid #FF5E45;
-            color: #FF5E45;
+            border: 2px solid #ff5e45;
+            color: #ff5e45;
             border-radius: 3px;
             width: 95%;
             padding: 8px 30px;
             margin-bottom: 10px;
 
-            i{
+            i {
                 font-size: 13px;
                 margin-right: 10px;
                 padding: 2px;
             }
 
-            &:hover{
-                transition: all .2s;
-                color: #FFFFFF;
+            &:hover {
+                transition: all 0.2s;
+                color: #ffffff;
                 background-color: #ff5e45;
             }
-            &:active{
-                color: #FFFFFF;
+            &:active {
+                color: #ffffff;
                 background-color: #ff5e45;
                 border: 2px solid #ff5e45;
             }
         }
-        .fa-heart{
+        .fa-heart {
             position: absolute;
             font-size: 16px;
-            color: #FFFFFF;
+            color: #ffffff;
             top: 2%;
             left: 2%;
         }
-        p{
-            &:first-child{
+        p {
+            &:first-child {
                 position: absolute;
                 top: 0px;
                 right: -8px;
                 transform: rotate(-315deg);
                 transform-origin: left center;
                 font-size: 14px;
-                color: #FFFFFF;
+                color: #ffffff;
                 z-index: 2;
                 font-weight: bold;
             }

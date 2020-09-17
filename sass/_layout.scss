@@ -1,37 +1,36 @@
-
 //設定變數
-$bg-color:rgb(239,233,231);
-$fn-color:rgb(61,17,1);
+$bg-color: rgb(239, 233, 231);
+$fn-color: rgb(61, 17, 1);
 
 //mixin setting
-@import 'mixin';
-@import 'variable';
-@import 'grid';
+@import "mixin";
+@import "variable";
+@import "grid";
 
 // mixin size
 
-.wrap{
+.wrap {
     max-width: 1024px;
     margin: 0 auto;
     position: relative;
-    .header{
+    .header {
         width: 100%;
         height: auto;
         background-color: rgba(0, 0, 0, 0.75);
         position: absolute;
         z-index: 99;
-        @include pad(){
+        @include pad() {
             position: fixed;
         }
     }
 }
-.topbar{
+.topbar {
     display: flex;
     justify-content: space-between;
     padding: 0% 3%;
     align-items: center;
     position: relative;
-    .head-logo a{
+    .head-logo a {
         background-image: url(../img/logo_w@svg.svg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -40,114 +39,106 @@ $fn-color:rgb(61,17,1);
         @include hide-text;
     }
 }
-.topmenu{
+.topmenu {
     list-style-type: none;
     display: flex;
-     align-items: center;
-     @include pad(){
-         flex-direction: column;
-         max-height: 0px;
-         overflow: hidden;
-         transition: ease-in-out 2s;
-         margin-top: 1px;
-         position: absolute;
-         z-index: 100;
-         top: 66.88px;
-         right: 0;
-         background-color: rgba(0,0,0,0.5);
-     }
-    >li a{
+    align-items: center;
+    @include pad() {
+        flex-direction: column;
+        max-height: 0px;
+        overflow: hidden;
+        transition: ease-in-out 2s;
+        margin-top: 1px;
+        position: absolute;
+        z-index: 100;
+        top: 66.88px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    > li a {
         color: white;
         padding: 16px 16px;
-        @include pad(){
-            color: rgba(250,250,250,0.70);
+        @include pad() {
+            color: rgba(250, 250, 250, 0.7);
             padding: 12px;
         }
     }
-    >li a:hover{
-        transition: all .3s;
-        border-bottom: 5px solid rgb(117, 110, 110);;
+    > li a:hover {
+        transition: all 0.3s;
+        border-bottom: 5px solid rgb(117, 110, 110);
     }
     .login-icon {
         font-size: 25px;
         margin-bottom: 5px;
     }
-    .login-icon a:hover{
+    .login-icon a:hover {
         border-bottom: none;
     }
 }
 
-
-
-.showmenu{
+.showmenu {
     display: none;
-    color: rgb(250,250,250);
+    color: rgb(250, 250, 250);
     font-size: 30px;
     text-align: center;
-    @include pad(){
+    @include pad() {
         display: block;
     }
 }
-.menu-show .topmenu{
-    @include pad(){
+.menu-show .topmenu {
+    @include pad() {
         max-height: 500px;
     }
-
 }
-
 
 //header end
 
-.banner{
-    background-image: url(https://upload.cc/i1/2020/09/03/XFhlLg.png
-    );
+.banner {
+    background-image: url(https://upload.cc/i1/2020/09/03/XFhlLg.png);
     height: 420px;
-   @include bg-set( repeat, center center, cover);
-   @include flex-set(flex, center, center);
+    @include bg-set(repeat, center center, cover);
+    @include flex-set(flex, center, center);
 
-    @include pad(){
-        background-image: url(https://upload.cc/i1/2020/09/03/ejrA7F.png
-        );
+    @include pad() {
+        background-image: url(https://upload.cc/i1/2020/09/03/ejrA7F.png);
     }
-    @include iphoneX(){
-        background-image: url(https://upload.cc/i1/2020/09/03/QwvRcY.png
-        );
+    @include iphoneX() {
+        background-image: url(https://upload.cc/i1/2020/09/03/QwvRcY.png);
     }
-    .banner-title{
+    .banner-title {
         color: white;
         text-align: center;
         padding: 30px;
-        background-color:rgba(0,0,0,0.4);
+        background-color: rgba(0, 0, 0, 0.4);
 
-        h2{
+        h2 {
             font-size: $h2-fz;
             line-height: 2;
         }
-        p{
+        p {
             font-size: 18px;
             line-height: 1.4;
         }
-        .fa-utensils{
+        .fa-utensils {
             padding: 0 10px;
         }
     }
 }
 //banner end
 
-
-.footer{
+.footer {
     @include flex-set(flex, flex-start, space-between);
-    line-height:1.5;
+    line-height: 1.5;
     color: $fn-color;
     background-color: $bg-color;
     padding: 5% 5%;
-    @include pad(){
+    @include pad() {
         flex-wrap: wrap;
     }
-    @include iphone8(){
+    @include iphone8() {
         flex-direction: column;
     }
-    .top-item{
+    .top-item {
         position: fixed;
         right: 1%;
         bottom: 1%;
@@ -157,82 +148,82 @@ $fn-color:rgb(61,17,1);
         cursor: pointer;
     }
 }
-.footer-infro{
+.footer-infro {
     width: 33.33333%;
-    @include pad(){
+    @include pad() {
         text-align: center;
         width: 50%;
     }
-    @include iphone8(){
+    @include iphone8() {
         display: none;
     }
-    h3{
+    h3 {
         font-size: 24px;
         line-height: 1.5;
     }
 }
-.footer-contact{
+.footer-contact {
     padding: 0 5%;
     width: 33.33333%;
-    @include pad(){
+    @include pad() {
         text-align: center;
         width: 50%;
     }
-    @include iphone8(){
+    @include iphone8() {
         width: 100%;
         text-align: center;
         margin-top: 8%;
     }
-    h3{
+    h3 {
         font-size: 24px;
         line-height: 1.5;
     }
-    li a{
+    li a {
         color: $fn-color;
     }
-    li a:hover{
+    li a:hover {
         transition: all 0.5s;
-        color:  rgba(198, 122, 122, 0.653);
+        color: rgba(198, 122, 122, 0.653);
     }
 }
-.footer-title{
+.footer-title {
     flex-direction: column;
     width: 33.33333%;
     @include flex-set(flex, flex-end, flex-start);
 
-    @include pad(){
+    @include pad() {
         width: 100%;
         padding-top: 2%;
         align-items: center;
     }
-    @include iphone8(){
+    @include iphone8() {
         width: 100%;
         margin-top: 8%;
     }
 
-    li i{
+    li i {
         font-size: $h1-fz;
-    }        
-    h2{
+    }
+    h2 {
         font-size: 40px;
     }
 }
-.footer-icon-list{
+.footer-icon-list {
     display: flex;
     list-style: none;
-    li a{
+    li a {
         padding: 10px 5px;
     }
-    li a:hover{
+    li a:hover {
         opacity: 0.5;
     }
-    .fa-google-plus-square{
-        color: rgb(219,68,55)
+    .fa-google-plus-square {
+        color: rgb(219, 68, 55);
     }
-    .fa-twitter-square{
-        color: rgb(65,171,225);
+    .fa-twitter-square {
+        color: rgb(65, 171, 225);
     }
-    .fa-facebook-square{
-        color:rgb(58,87,149) ;
+    .fa-facebook-square {
+        color: rgb(58, 87, 149);
     }
 }
