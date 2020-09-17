@@ -90,10 +90,14 @@ button{
 .topmenu .login-icon a:hover{
     border-bottom: none;
 }
+.topmenu .login-icon{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
 /*隱藏手機板選單 */
 .showmenu{
     display: none;
-    color: rgba(250,250,250);
+    color: rgb(250,250,250);
     font-size: 30px;
     text-align: center;
 }
@@ -130,9 +134,7 @@ button{
         max-height: 500px;
     }
 }
-@media(max-width:375px){
 
-}
 .banner{
     background-image: url(https://upload.cc/i1/2020/09/03/XFhlLg.png
     );
@@ -151,10 +153,7 @@ button{
     padding: 30px;
     background-color:rgba(0,0,0,0.4);
 }
-.topmenu .login-icon{
-    font-size: 25px;
-    margin-bottom: 5px;
-}
+
 .banner-title h2{
     line-height: 2;
     font-size: 30px;
@@ -465,9 +464,7 @@ button{
         padding: 2% 5%;
     }
 }
-@media(max-width:375px){
 
-}
 /* comment end */
 .map{
     background: rgba(250,250,250,0.70);
@@ -969,6 +966,7 @@ button{
 .shop-count a:last-child{
     position: relative;
 }
+
 .shop-count a:last-child::before{
     content: "";
     display: block;

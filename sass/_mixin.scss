@@ -1,0 +1,29 @@
+@mixin hide-text {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin div-set($width,$height,$border,) {
+    width: $width;
+    height: $height;
+    border: $border;
+}
+
+@mixin bg-set($bg-repeat,$bg-pos,$bg-size) {
+   background-repeat: $bg-repeat;
+   background-position: $bg-pos;
+   background-size: $bg-size;
+}
+
+@mixin flex-set ($flex-init,$flex-align,$flex-jc){
+   display: $flex-init;
+   justify-content: $flex-jc;
+   align-items: $flex-align;
+}
+@mixin clear {
+   clear: both;
+   content: "";
+   display: table;
+   overflow: hidden;
+}

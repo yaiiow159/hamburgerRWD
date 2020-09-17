@@ -1,0 +1,294 @@
+
+$bg-color:rgb(239,233,231);
+$fn-color:rgb(61,17,1);
+
+@import 'variable';
+@import 'mixin';
+@import 'grid';
+
+.secret-tip{
+    color: $fn-color;
+    background-color: $bg-color;
+    h2{
+        font-size: 20px;
+        text-align: center;
+        line-height: 1.5;
+        padding-top: 30px;
+        position: relative;
+        &::before{
+            content: "";
+            height: 1px;
+            width: 12%;
+            border: 1px solid #979797;
+            background-color: #979797;
+            position: absolute;
+            top: calc(60% - 0.5px);
+            left: 27%;
+            @include pad(){
+                display: none;
+            }
+        }
+        &::after{
+            content: "";
+            height: 1px;
+            width: 12%;
+            border: 1px solid #979797;
+            background-color: #979797;
+            position: absolute;
+            top: calc(60% - 0.5px);
+            right: 27%;
+
+            @include pad(){
+                display: none;
+            }
+        }
+    }
+}
+.tips-list{
+    @include flex-set(flex, flex-start, space-around);
+    list-style-type: none;
+    padding: 5%;
+    @include pad(){
+        flex-wrap: wrap;
+    }
+
+    .tips-item{
+        text-align: center;
+        line-height: 1.5;
+        width: 30.33333%;
+        margin: 0% 1.5%;
+
+        @include pad(){
+            width: 48%;
+            margin: 2% 1%;
+        }
+        @include iphoneX(){
+            width: 98%;
+            margin: 2% 1%;
+        }
+
+        &:last-child{
+            display: none;
+            @include pad(){
+                display: block;
+            }
+        }
+        img{
+            border-radius: 100%;
+        }
+        h3{
+            font-size: $h3-fz;
+            line-height: 1.8;
+            margin: 2% 0%;
+        }
+        p{
+            text-align: left;
+        }
+    }  
+}
+.chef-person{
+
+    @include flex-set(flex, center, space-around);
+    background-color: $fn-color;
+
+    @media (max-width:660px) {
+        @include flex-set(flex,center,center);
+        flex-wrap:wrap;
+        flex-direction: column;
+    } 
+
+    .chef-img{
+        @include bg-set( repeat, center center, cover);
+        margin: 0% 2.5%;
+        width: 45%;
+        height: 470px;
+        background-image: url(https://upload.cc/i1/2020/09/03/6puI5O.png);
+
+        @media (max-width:660px) {
+            background-image:url(https://upload.cc/i1/2020/09/03/6puI5O.png    );
+            background-size: cover;
+            width: 90%;
+            margin: 0 5%;
+        } 
+    }
+
+    .chef-intro{
+        width: 45%;
+        text-align: left;
+        margin:0% 2.5%;
+
+        @media (max-width:660px) {
+            width: 90%;
+            margin: 5%;
+        } 
+        h3,p{
+            line-height: 1.5;
+            color: $bg-color;
+        }
+        h3{
+            font-size: 24px;
+            &:nth-child(2){
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
+.comment{
+    color: $fn-color;
+    line-height: 24px;
+    background-color: $bg-color;
+    padding-bottom: 50px;
+    h2{
+        font-size: 24px;
+        text-align: center;
+        line-height: 4;
+    }
+}
+.comment-list{
+    @include flex-set(flex, flex-start, space-between);
+    list-style-type: none;
+    padding: 0 1.5%;
+
+    @include pad(){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img{
+        border-radius: 50%;
+    }
+    h3{
+        font-size: $h3-fz;
+        line-height: 3;
+    }
+    p:last-child{
+        color: saddlebrown;
+        text-align: right;
+        margin-top: 6%;
+    }
+    .comment-item{
+        display: flex;
+        align-items:flex-start;
+        width: 30.33333%;
+        margin: 0% 1.5%;
+        @include pad(){
+            width: 100%;
+            padding: 2% 5%;
+        }
+    }
+}
+.comment-text{
+    padding: 0 13px;
+}
+.map{
+    background: rgba(250,250,250,0.70);
+    padding: 36px 0px;
+    h2{
+        font-size: 24px;
+        text-align: center;
+        margin: 24px 0;
+        color: $fn-color;
+        line-height: 1.6;
+    }
+    .mapbar{
+        line-height:1.5;
+        @include flex-set(flex, center, center);
+        color: $fn-color;
+
+        @include pad(){
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        >div{
+            margin: 0% 1.5% 0% 2.5%;
+            width: 46%;
+        }
+        .person-intro{
+            margin-left: 2%;
+        }
+        .map-img{
+            @include pad(){
+                justify-content: center;
+                width: 96%;
+                margin: 2%;
+            }
+            iframe{
+                width: 100%;
+            }
+        }
+        .person-infro{
+            width: 96%;
+            margin-right: 2%;
+            margin-left: 2%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.pure-form-stacked .radio-check{
+    display: inline;
+} 
+.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="email"],
+.pure-form-stacked input[type="number"],
+.pure-form-stacked input[type="tel"]{
+    width: 100%;
+    height: auto;
+}
+.pure-form-stacked input[type="radio"]{
+    margin: 25px 25px 25px 0px;
+}
+.pure-form-stacked p{
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+.btn-index{
+    @include flex-set(flex, flex-start, flex-end);
+
+    @include iphoneX(){
+        @include flex-set(flex, center, center);
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    button{
+        @include iphoneX(){
+            width: 95%;
+            margin: 0% 2.5%;
+        }
+    }
+}
+.submit-cancel{
+    font-size: 14px;
+    width: 20%;
+    height: auto;
+    background-color: rgb(160,158,158);
+    padding: 2% 0%;
+    margin: 0% 0.5%;
+    border: 1px solid rgb(160,158,158) ;
+    border-radius: 3px;
+    color: #ffffff;
+    &:hover{
+        transition: all .3s;
+        background-color: rgb(62, 59, 59);
+        border: 1px solid rgb(62, 59, 59) ;
+    }
+}
+.submit-sent{
+    background-color: rgb(245,108,35);
+    width: 20%;
+    padding: 2% 0%;
+    height: auto;
+    font-size: 14px;
+    border: 1px solid rgb(245,108,35);
+    border-radius: 3px;
+    color: #ffffff;
+    margin: 0% 0.5%;
+    &:hover{
+        transition: all .3s;
+        background-color: burlywood;
+        border: 1px solid burlywood;
+        color: rgb(64, 2, 2);
+    }
+}
