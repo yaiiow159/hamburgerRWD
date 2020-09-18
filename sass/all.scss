@@ -4,3 +4,15 @@
 @import "login-content";
 @import "register-content";
 @import "cart.content";
+
+
+.animated{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+
+.fadeIn{
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -7,7 +7,7 @@ $(document).ready(function () {
         
         $('html,body').animate({scrollTop : targetPos}, 1500);
     });
-
+    //scroll end
 
     $('.cart-item button').click(function (e) {
 
@@ -21,6 +21,21 @@ $(document).ready(function () {
             $('.shop-count a span').text(c);
         }
     });
+    //window pos show item
+    $(window).scroll(function () { 
+        var scrollPos = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        // console.log('scrollPos',scrollPos);
+        $('.animated').each(function(){
+            var thisPos = $(this).offset().top;
+            if((windowHeight + scrollPos) >= thisPos){
+                $(this).addClass('fadeIn');
+            }else{
+               $(this).removeClass('fadeIn');
+            }
+        });
+    });
+
     //讓選單秀出來
     $('.showmenu').click(function (e) {
         e.preventDefault();
