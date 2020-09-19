@@ -9,6 +9,10 @@ $(document).ready(function () {
     });
     //scroll end
 
+    $('.top-item').click(function (e) { 
+        $('html,body').animate({scrollTop:0},1000);
+        
+    });
     $('.cart-item button').click(function (e) {
 
         $(this).text('已加入購物車');
